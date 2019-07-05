@@ -1,0 +1,120 @@
+body{
+	margin:0;
+	padding: 0;
+	font-family: 'Dosis', sans-serif;
+	color: black;
+	text-align: center;
+	height: 560px;
+	background-image: url("https://www.alaskaoceanpros.com/wp-content/uploads/2018/01/slide18.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+#greetMessage{
+	font-size: 5rem;
+	margin-top: 10vh;
+	padding: 0;
+	animation-name:greetMessageAnimation;
+	animation-duration: 3s;
+	
+}
+@keyframes greetMessageAnimation{
+	from{opacity: 0;margin-top: 0vh;transform: rotateX(90deg)}
+	to{opacity: 1;margin-top: 10vh;transform: rotateX(360deg)}	
+}
+
+
+h2{
+	font-size: 3rem;
+	animation-name:dateHeading;
+	animation-duration: 3s;
+}
+@keyframes dateHeading{
+	0%{opacity: 0;font-size: 1rem;}
+	100%{opacity: 1;font-size: 3rem;}
+}
+
+h3{
+	opacity:0;
+	position: relative;
+	font-size: 2rem;  
+	animation-name: questionRotate;
+	animation-fill-mode: forwards;
+	animation-duration: 3s;
+	animation-delay: 3s;
+}
+@keyframes questionRotate{
+	0%{transform: rotateY(0deg);text-shadow:none;font-size: 2rem}
+	50%{font-size: 2.5rem;}
+	100%{opacity:1;transform:rotateX(360deg);text-shadow:2px 2px 2px white;}
+}
+
+
+ul{
+	margin:0 auto;
+	padding: 0;
+	padding: 1% 0;
+	font-size: 1.25em;
+	text-align: center;
+	list-style: none;
+	width: 60%;
+}
+
+@media(max-width: 768px){	
+	*{
+		margin: 0;
+		padding: 0;
+		height: auto;
+	}
+	h1{
+		font-size: 3rem;
+		margin-bottom: 2vh;
+		animation-fill-mode: forwards;
+	}
+	@keyframes greetMessageAnimation{
+	from{opacity: 0;margin-top: 0vh;transform: rotateX(90deg)}
+	to{opacity: 1;margin-top: 5vh;transform: rotateX(360deg)}	
+}
+
+	h2{
+		font-size: 1.5rem;
+		margin-top: 1.5vh;
+	}
+
+	@keyframes dateHeading{
+	0%{opacity: 0;font-size: 1rem;}
+	100%{opacity: 1;font-size: 1.5rem;}
+}
+	h3{
+		font-size: 1rem;
+	}
+	ul{
+		font-size: 1rem;
+	}
+}
+
+@media(max-width: 600px){	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	h1{
+		font-size: 4rem !important;
+		animation-fill-mode: forwards;
+	}
+	@keyframes greetMessageAnimation{
+	from{opacity: 0;margin-top: 0vh;transform: rotateX(90deg)}
+	to{opacity: 1;margin-top: 4vh;transform: rotateX(360deg)}	
+}
+
+
+	h2{
+		font-size: 1.5rem;
+	}
+	h3{
+		font-size: 1rem;
+	}
+	ul{
+		font-size: 0.8rem;
+	}
+}
